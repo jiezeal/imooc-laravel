@@ -96,4 +96,21 @@ class Personal extends Model{
 	}
 }
 ```
+PersonalController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Personal;
+
+class PersonalController extends Controller
+{
+	public function index(){
+		return Personal::getAll();
+	}
+}
+```
+
+###数据库操作之-DB facade
 
