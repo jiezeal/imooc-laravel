@@ -115,6 +115,18 @@ class PersonalController extends Controller
 ![](image/screenshot_1482515920062.png)
 
 ###使用DB facade实现CURD
+```
+CREATE TABLE `student` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '学生表',
+  `name` varchar(255) NOT NULL DEFAULT '' COMMENT '姓名',
+  `age` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '年龄',
+  `sex` tinyint(3) unsigned NOT NULL DEFAULT '10' COMMENT '10 未知   20 男   30 女',
+  `create_at` int(11) NOT NULL DEFAULT '0' COMMENT '新增时间',
+  `update_at` int(11) NOT NULL DEFAULT '0' COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+```
+
 routes.php
 ```
 Route::get('student', [
