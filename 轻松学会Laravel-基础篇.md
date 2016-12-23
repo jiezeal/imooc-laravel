@@ -17,7 +17,6 @@ Route::get('user/{name?}', function($name='zhangsan'){
 ```
 不传参数访问： http://www.zhulinjie.com/laravel/public/user ，效果如下：
 
-
 传参数访问：http://www.zhulinjie.com/laravel/public/user/zhulinjie ，效果如下：
 
 
