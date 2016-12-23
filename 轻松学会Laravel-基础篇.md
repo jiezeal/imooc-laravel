@@ -10,13 +10,18 @@ Route::get('user/{id}', function($id){
 ```
 符合条件的路由：http://www.zhulinjie.com/laravel/public/user/1
 
+![](image/screenshot_1482508955063.png)
+
 ```
 Route::get('user/{name?}', function($name='zhangsan'){
 	return $name;
 });
 ```
-不传参数访问： http://www.zhulinjie.com/laravel/public/user  
+不传参数访问： http://www.zhulinjie.com/laravel/public/user
+
+![](image/screenshot_1482509018979.png)  
 传参数访问：http://www.zhulinjie.com/laravel/public/user/zhulinjie
+
 
 ```
 Route::get('user/{name?}', function($name='zhangsan'){
@@ -24,7 +29,8 @@ Route::get('user/{name?}', function($name='zhangsan'){
 })->where('name', '[A-Za-z]+');
 ```
 符合条件的路由：http://www.zhulinjie.com/laravel/public/user/zhangsan
-![](image/screenshot_1482508724051.png)
+![](image/screenshot_1482508724051.png)  
+
 不符合条件的路由：http://www.zhulinjie.com/laravel/public/user/1
 ![](image/screenshot_1482508768893.png)
 
