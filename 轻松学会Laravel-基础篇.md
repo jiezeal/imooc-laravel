@@ -1,9 +1,7 @@
 #轻松学会Laravel-基础篇
 
-####Laravel 一键安装包下载：
-```
-[http://www.golaravel.com/download/](http://www.golaravel.com/download/) 
-```
+#####Laravel 一键安装包下载：[http://www.golaravel.com/download/](http://www.golaravel.com/download/) 
+
 
 ###路由参数
 ```
