@@ -25,7 +25,7 @@ Route::get('user/{name?}', function($name='zhangsan'){
 ```
 符合条件的路由：http://www.zhulinjie.com/laravel/public/user/zhangsan
 ![](image/screenshot_1482508724051.png)
-不符合条件的路由：
+不符合条件的路由：http://www.zhulinjie.com/laravel/public/user/1
 ![](image/screenshot_1482508768893.png)
 
 ###别名路由
