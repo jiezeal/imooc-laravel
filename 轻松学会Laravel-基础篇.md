@@ -31,9 +31,11 @@ Route::get('user/{name?}', function($name='zhangsan'){
 })->where('name', '[A-Za-z]+');
 ```
 符合条件的路由：http://www.zhulinjie.com/laravel/public/user/zhangsan
+
 ![](image/screenshot_1482508724051.png)  
 
 不符合条件的路由：http://www.zhulinjie.com/laravel/public/user/1
+
 ![](image/screenshot_1482508768893.png)
 
 ###别名路由
@@ -111,7 +113,46 @@ class PersonalController extends Controller
 	}
 }
 ```
+![](image/screenshot_1482515920062.png)
 
 ###使用DB facade实现CURD
+routes.php
+```
+Route::get('student', [
+	'uses' => 'StudentController@index',
+	'as' => 'student'
+]);
+```
+StudentController.php
+```
+<?php
 
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// // 新增
+		// $bool = DB::insert('insert into student(name, age) values(?, ?)', ['lisi', 25]);
+		// var_dump($bool);
+		
+		// // 更新
+		// $num = DB::update('update student set age = ? where name = ?', [20, 'zhangsan']);
+		// // 返回影响的行数
+		// var_dump($num);		
+
+		// // 删除
+		// $num = DB::delete('delete from student where id > ?', [1]);
+		// // 返回影响的行数
+		// var_dump($num);
+		
+		// 查询
+		$data = DB::select('select * from student where id >= ?', [1]);
+		dd($data);
+	}
+}
+```
+![](image/screenshot_1482516058916.png)
 
