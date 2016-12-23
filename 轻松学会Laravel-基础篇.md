@@ -8,7 +8,7 @@ Route::get('user/{id}', function($id){
 	return $id;
 });
 ```
-访问：http://www.zhulinjie.com/laravel/public/user/1 ，效果如下：
+符合条件的路由：http://www.zhulinjie.com/laravel/public/user/1
 
 ```
 Route::get('user/{name?}', function($name='zhangsan'){
