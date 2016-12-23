@@ -27,3 +27,10 @@ Route::get('user/{name?}', function($name='zhangsan'){
 不符合条件的路由：http://www.zhulinjie.com/laravel/public/user/1
 
 ###别名路由
+```
+Route::get('user/user-personal', ['as'=>'personal', function(){
+	return route('personal');
+}]);
+```
+符合条件的路由：http://www.zhulinjie.com/laravel/public/user/user-personal
+![](image/screenshot_1482508600989.png)
