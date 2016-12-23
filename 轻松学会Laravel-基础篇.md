@@ -23,4 +23,5 @@ Route::get('user/{name?}', function($name='zhangsan'){
 	return $name;
 })->where('name', '[A-Za-z]+');
 ```
-符合条件的路由：http://www.zhulinjie.com/laravel/public/user/zhangsan ，效果如下：
+符合条件的路由：http://www.zhulinjie.com/laravel/public/user/zhangsan
+
