@@ -23,8 +23,9 @@ Route::get('user/{name?}', function($name='zhangsan'){
 	return $name;
 })->where('name', '[A-Za-z]+');
 ```
-符合条件的路由：http://www.zhulinjie.com/laravel/public/user/zhangsan  
-不符合条件的路由：http://www.zhulinjie.com/laravel/public/user/1
+符合条件的路由：
+![](image/screenshot_1482508724051.png)
+![](image/screenshot_1482508768893.png)
 
 ###别名路由
 ```
