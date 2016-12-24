@@ -501,3 +501,27 @@ class StudentController extends Controller
 ```
 
 ###使用Eloquent ORM修改数据
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// 通过模型更新
+		// $student = Student::find(1);
+		// $student->name = 'zhulinjie';
+		// $bool = $student->save();
+		// dd($bool);
+
+		// 结合查询语句 批量更新
+		$num = Student::where('id', '>', 2)->update(['age'=>22]);
+		dd($num);
+	}
+}
+```
