@@ -331,4 +331,31 @@ chunk() 方法浏览器中运行效果：
 
 ![](image/screenshot_1482572230629.png)
 
+###查询构造器中的聚合函数
+```
+<?php
 
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// $num = DB::table('student')->count();
+		// var_dump($num);
+		
+		// $max = DB::table('student')->max('age');
+		// var_dump($max);
+		
+		// $min = DB::table('student')->min('age');
+		// var_dump($min);
+
+		// $avg = DB::table('student')->avg('age');
+		// var_dump($avg);
+		
+		$sum = DB::table('student')->sum('age');
+		var_dump($sum);
+	}
+}
+```
