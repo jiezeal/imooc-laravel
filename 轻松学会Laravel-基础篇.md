@@ -146,8 +146,8 @@ class StudentController extends Controller
 {
 	public function index(){
 		// 新增
-		$bool = DB::insert('insert into student(name, age) values(?, ?)', ['lisi', 25]);
-		var_dump($bool);
+		// $bool = DB::insert('insert into student(name, age) values(?, ?)', ['lisi', 25]);
+		// var_dump($bool);
 		
 		// 更新
 		// $num = DB::update('update student set age = ? where name = ?', [20, 'zhangsan']);
