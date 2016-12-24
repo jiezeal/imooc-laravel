@@ -155,7 +155,7 @@ class StudentController extends Controller
 		// var_dump($num);		
 
 		// 删除
-		$num = DB::delete('delete from student where id > ?', [1]);
+		// $num = DB::delete('delete from student where id > ?', [1]);
 		// 返回影响的行数
 		// var_dump($num);
 		
