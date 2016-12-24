@@ -359,3 +359,9 @@ class StudentController extends Controller
 	}
 }
 ```
+
+###ORM简介、模型的建立及查询数据
+Student.php
+```
+
+```
