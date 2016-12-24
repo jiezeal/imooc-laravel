@@ -363,5 +363,63 @@ class StudentController extends Controller
 ###ORM简介、模型的建立及查询数据
 Student.php
 ```
+<?php
 
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Student extends Model{
+	// 指定表名
+	protected $table = 'student';			// 默认对应的是students表
+
+	// 指定主键
+	// protected $primaryKey = 'id';		// 默认主键就是ID
+}
+```
+
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// $students = Student::all();
+		// dd($students);
+		
+		// 获取id为1的记录，如果记录不存在，返回null
+		// $student = Student::find(1);
+		// dd($student);
+		
+		// 获取id为11的记录，如果记录不存在，会报错
+		// $student = Student::findOrFail(1);
+		// dd($student);
+		
+		// 查询构造器在ORM中的应用
+		// $students = Student::get();
+		// dd($students);
+		
+		// $student = Student::where('id', 1)->first();
+		// dd($student);
+		
+		// echo '<pre>';
+		// Student::chunk(3, function($students){
+		// 	print_r($students);
+		// });
+		
+		// 查询构造器中的聚合函数在ORM中的应用
+		// $num = Student::count();
+		// dd($num);
+		
+		$max = Student::where('id', '>', 1)->max('age');
+		dd($max);
+	}
+}
 ```
