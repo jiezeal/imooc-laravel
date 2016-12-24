@@ -150,13 +150,13 @@ class StudentController extends Controller
 		var_dump($bool);
 		
 		// 更新
-		$num = DB::update('update student set age = ? where name = ?', [20, 'zhangsan']);
+		// $num = DB::update('update student set age = ? where name = ?', [20, 'zhangsan']);
 		// 返回影响的行数
 		// var_dump($num);		
 
-		// // 删除
-		// $num = DB::delete('delete from student where id > ?', [1]);
-		// // 返回影响的行数
+		// 删除
+		$num = DB::delete('delete from student where id > ?', [1]);
+		// 返回影响的行数
 		// var_dump($num);
 		
 		// 查询
