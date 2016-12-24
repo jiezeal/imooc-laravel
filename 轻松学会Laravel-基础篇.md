@@ -360,7 +360,7 @@ class StudentController extends Controller
 }
 ```
 
-###ORM简介、模型的建立及查询数据
+###Eloquent ORM简介、模型的建立及查询数据
 Student.php
 ```
 <?php
@@ -423,3 +423,81 @@ class StudentController extends Controller
 	}
 }
 ```
+
+###Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用 
+Student.php
+```
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Student extends Model{
+	// 指定表名
+	protected $table = 'student';			// 默认对应的是students表
+
+	// 指定主键
+	// protected $primaryKey = 'id';		// 默认主键就是ID
+	
+	// 指定允许批量赋值的字段
+	protected $fillable = ['name', 'age'];
+
+	// 指定不允许批量赋值的字段
+	protected $guarded = [];
+	
+	// 自动维护新增时间和修改时间
+	public $timestamps = true;
+
+	// 将新增时间和修改时间以时间戳的方式进行管理
+	protected function getDateFormat(){
+		return time();
+	}
+
+	// 在获取新增时间和修改时间的时候不做任何处理 如果不写这个方法 默认会将时间戳转换成 2016-12-24 13:24:58 格式
+	protected function asDateTime($val){
+		return $val;
+	}
+}
+```
+
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// 使用模型新增数据
+		// $student = new Student();
+		// $student->name = 'zhangsan';
+		// $student->age = 18;
+		// $bool = $student->save();
+		// dd($bool);
+
+		// $student = Student::find(1);
+		// echo $student->created_at;		
+		
+		// 使用模型的create方法新增数据
+		// $student = Student::create(['name'=>'lishi', 'age'=>19]);
+		// dd($student);
+
+		// 以属性值查找用户 如果不存在 则新增数据
+		// $student = Student::firstOrCreate(['name'=>'wangwu', 'age'=>20]);
+		// dd($student);
+
+		// 以属性值查找用户 如果不存在 则新增数据 
+		$student = Student::firstOrNew(['name'=>'zhaoliu', 'age'=>21]);
+		$bool = $student->save();
+		dd($bool);
+	}
+}
+```
+
+###使用Eloquent ORM修改数据
