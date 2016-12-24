@@ -235,3 +235,22 @@ class StudentController extends Controller
 ```
 
 ###查询构造器删除数据
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// 删除id大于6的记录 返回影响记录行数
+		// $num = DB::table('student')->where('id', '>', 6)->delete();
+		// var_dump($num);
+
+		// 清空数据 不返回任何数据
+		DB::table('student')->truncate();
+	}
+}
+```
