@@ -234,4 +234,4 @@ class StudentController extends Controller
 }
 ```
 
-
+###查询构造器删除数据
