@@ -169,5 +169,68 @@ class StudentController extends Controller
 
 ###查询构造器新增数据
 ```
+<?php
 
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// 新增一条数据
+		// $bool = DB::table('student')->insert(['name'=>'zhangsan', 'age'=>18]);
+		// var_dump($bool);
+		
+		// 新增一条数据并获取自增ID
+		// $id = DB::table('student')->insertGetId(['name'=>'lishi', 'age'=>20]);
+		// var_dump($id);
+		
+		// 新增多条数据
+		$bool = DB::table('student')->insert([
+			['name'=>'wangwu', 'age'=>25],
+			['name'=>'zhaoliu', 'age'=>22]
+		]);
+		var_dump($bool);
+	}
+}
 ```
+
+###查询构造器更新数据
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// 更新 返回受影响的行数
+		// $num = DB::table('student')->where('id', 4)->update(['age'=>30]);
+		// var_dump($num);
+		
+		// 自增1
+		// $num = DB::table('student')->where('id', 4)->increment('age'); 
+		// var_dump($num);
+
+		// 自增3
+		// $num = DB::table('student')->where('id', 4)->increment('age', 3);
+		// var_dump($num);
+
+		// 自减1
+		// $num = DB::table('student')->where('id', 4)->decrement('age');
+		// var_dump($num);
+		
+		// 自减3
+		// $num = DB::table('student')->where('id', 4)->decrement('age', 3);
+		// var_dump($num);
+
+		// 自增3 同时将name改为zhulinjie
+		$num = DB::table('student')->where('id', 4)->increment('age', 3, ['name'=>'zhulinjie']);
+		var_dump($num);
+	}
+}
+```
+
