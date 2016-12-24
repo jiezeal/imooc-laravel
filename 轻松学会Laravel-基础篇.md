@@ -525,3 +525,34 @@ class StudentController extends Controller
 	}
 }
 ```
+
+###使用Eloquent ORM删除数据
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// 通过模型删除
+		// $student = Student::find(4);
+		// $bool = $student->delete();
+		// dd($bool);
+
+		// 通过主键删除
+		// $num = Student::destroy(4);
+		// $num = Student::destroy(3, 2);
+		// $num = Student::destroy([3, 2]);
+		// dd($num);
+
+		// 根据指定条件删除
+		$num = Student::where('id', '>=', 1)->delete();
+		dd($num);
+	}
+}
+```
