@@ -315,11 +315,20 @@ class StudentController extends Controller
 	}
 }
 ```
+pluck() 方法浏览器中运行效果：
 
 ![](image/screenshot_1482570879793.png)
 
+lists() 方法浏览器中运行效果：
+
 ![](image/screenshot_1482571169859.png)
+
+chunk() 方法浏览器中运行效果：
 
 ![](image/screenshot_1482572117325.png)
 
+chunk() 方法浏览器中运行效果：
+
 ![](image/screenshot_1482572230629.png)
+
+
