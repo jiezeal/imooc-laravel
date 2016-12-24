@@ -254,3 +254,72 @@ class StudentController extends Controller
 	}
 }
 ```
+
+###查询构造器查询数据
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		// get() 获取多条记录
+		// $students = DB::table('student')->get();
+		// dd($students);
+
+		// first() 获取结果集中的第一条记录
+		// $student = DB::table('student')->first();
+		// dd($student);
+		
+		// where() 
+		// $students = DB::table('student')->where('id', '>=', 2)->get();
+		// dd($students);
+		
+		// whereRaw() 多条件查询
+		// $students = DB::table('student')->whereRaw('id >= ? and id <= ?', [2,3])->get();
+		// dd($students);
+		
+		// $students = DB::table('student')->whereRaw('id >= ? or age = ?', [3, 18])->get();
+		// dd($students);
+		
+		// pluck() 从数据表中取得单一数据列
+		// $names = DB::table('student')->pluck('name');
+		// dd($names);
+
+		// lists() 也可以获取单一数据列，但lists的第二个参数可以将某个字段当前键返回
+		// $names = DB::table('student')->lists('name');
+		// dd($names);
+
+		// $students = DB::table('student')->lists('age', 'name');
+		// dd($students);
+		
+		// select() 指定查询字段
+		// $students = DB::table('student')->select('name', 'age')->get();
+		// dd($students);
+
+		// chunk() 拆分查询 备注：现在并不明白是什么意思和具体的使用场景
+		// echo '<pre>';
+		// DB::table('student')->chunk(3, function($students){
+		// 	print_r($students);
+		// });
+		
+		echo '<pre>';
+		DB::table('student')->chunk(3, function($students){
+			print_r($students);
+
+			return false;
+		});
+	}
+}
+```
+
+![](image/screenshot_1482570879793.png)
+
+![](image/screenshot_1482571169859.png)
+
+![](image/screenshot_1482572117325.png)
+
+![](image/screenshot_1482572230629.png)
