@@ -145,13 +145,13 @@ use Illuminate\Support\Facades\DB;
 class StudentController extends Controller
 {
 	public function index(){
-		// // 新增
-		// $bool = DB::insert('insert into student(name, age) values(?, ?)', ['lisi', 25]);
-		// var_dump($bool);
+		// 新增
+		$bool = DB::insert('insert into student(name, age) values(?, ?)', ['lisi', 25]);
+		var_dump($bool);
 		
-		// // 更新
-		// $num = DB::update('update student set age = ? where name = ?', [20, 'zhangsan']);
-		// // 返回影响的行数
+		// 更新
+		$num = DB::update('update student set age = ? where name = ?', [20, 'zhangsan']);
+		// 返回影响的行数
 		// var_dump($num);		
 
 		// // 删除
@@ -167,3 +167,7 @@ class StudentController extends Controller
 ```
 ![](image/screenshot_1482516058916.png)
 
+###查询构造器新增数据
+```
+
+```
