@@ -660,6 +660,14 @@ class StudentController extends Controller
 >action() 通过指定控制器和方法名生成url
 >route() 通过路由的别名生成url
 
+routes.php
+```
+Route::get('student', [
+	'uses' => 'StudentController@index',
+	'as' => 'student'
+]);
+```
+
 StudentController.php
 ```
 <?php
@@ -677,3 +685,22 @@ class StudentController extends Controller
 	}
 }
 ```
+
+student.blade.php
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>student</title>
+</head>
+<body>
+	<ul>
+		<li><a href="{{ url('student') }}">{{ url('student') }}</a></li>
+		<li><a href="{{ action('StudentController@index') }}">{{ action('StudentController@index') }}</a></li>
+		<li><a href="{{ route('student') }}">{{ route('student') }}</a></li>
+	</ul>
+</body>
+</html>
+```
+![](image/screenshot_1483030920499.png)
