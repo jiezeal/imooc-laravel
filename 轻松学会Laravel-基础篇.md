@@ -576,5 +576,20 @@ class StudentController extends Controller
 		return view('student', ['name'=>'zhangsan']);
 	}
 }
+```
 
+student.blade.php
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>student</title>
+</head>
+<body>
+	@unless($name != 'zhangsan')
+		{{$name}}
+	@endunless
+</body>
+</html>
 ```
