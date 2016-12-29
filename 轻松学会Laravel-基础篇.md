@@ -558,3 +558,23 @@ class StudentController extends Controller
 	}
 }
 ```
+
+###Blade模板引擎-流程控制
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		return view('student', ['name'=>'zhangsan']);
+	}
+}
+
+```
