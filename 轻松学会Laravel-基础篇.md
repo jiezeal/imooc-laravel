@@ -660,14 +660,6 @@ class StudentController extends Controller
 >action() 通过指定控制器和方法名生成url
 >route() 通过路由的别名生成url
 
-routes.php
-```
-Route::get('student', [
-	'uses' => 'StudentController@index',
-	'as' => 'student'
-]);
-```
-
 StudentController.php
 ```
 <?php
