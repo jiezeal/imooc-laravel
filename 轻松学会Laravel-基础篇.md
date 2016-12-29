@@ -653,3 +653,6 @@ class StudentController extends Controller
 	}
 }
 ```
+![](image/screenshot_1483029951119.png)
+
+###Blade模板引擎-模板中的URL
