@@ -613,3 +613,23 @@ class StudentController extends Controller
 	}
 }
 ```
+
+student.blade.php
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>student</title>
+</head>
+<body>
+	<ul>
+		@forelse($stu as $val)
+			<li>{{$val->name}} {{$val->age}}</li>
+		@empty
+			<li>暂无数据</li>
+		@endforelse
+	</ul>
+</body>
+</html>
+```
