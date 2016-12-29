@@ -656,3 +656,8 @@ class StudentController extends Controller
 ![](image/screenshot_1483029951119.png)
 
 ###Blade模板引擎-模板中的URL
+```
+url() 通过路由的名称生成url
+action() 通过指定控制器和方法名生成url
+route() 通过路由的别名生成url
+```
