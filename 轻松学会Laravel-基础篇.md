@@ -593,3 +593,23 @@ student.blade.php
 </body>
 </html>
 ```
+![](image/screenshot_1483028893123.png)
+
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		$stu = Student::get();
+		return view('student', ['stu'=>$stu]);
+	}
+}
+```
