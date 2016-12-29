@@ -662,5 +662,18 @@ class StudentController extends Controller
 
 StudentController.php
 ```
+<?php
 
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		return view('student');
+	}
+}
 ```
