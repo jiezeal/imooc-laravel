@@ -633,3 +633,23 @@ student.blade.php
 </body>
 </html>
 ```
+![](image/screenshot_1483029872152.png)
+
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Student;
+
+use Illuminate\Support\Facades\DB;
+
+class StudentController extends Controller
+{
+	public function index(){
+		$stu = [];
+		return view('student', ['stu'=>$stu]);
+	}
+}
+```
