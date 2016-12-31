@@ -937,7 +937,7 @@ class StudentController extends Controller
 	}
 
 	public function response(){
-		echo Session::get('message');
+		echo Session::get('message', 'default');
 	}
 }
 ```
