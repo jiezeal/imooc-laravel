@@ -820,13 +820,11 @@ class StudentController extends Controller
 		// HTTP request session()
 		$request->session()->put('name', 'zhangsan');
 		echo $request->session()->get('name');
-
 		echo '<br />';
 
 		// session()
 		session()->put('email', 'zhulinjie_cool@126.com');
 		echo session()->get('email');
-
 		echo '<br />';
 
 		// Session
@@ -836,8 +834,54 @@ class StudentController extends Controller
 
 		// 不存在取默认值
 		echo Session::get('location', 'beijing chaoyang');
+		echo '<br />';
+
+		// 以数组的形式存储数据
+		Session::put(['key1'=>'value1']);
+		echo Session::get('key1', 'default');
+
+		// 把数据存放到Session的数组中
+		Session::push('arr1', 'value1');
+		Session::push('arr1', 'value2');
+		$res = Session::get('arr1');
+		echo '<pre>';
+		print_r($res);
+		echo '<br />';
+
+		// 取出数据并删除
+		Session::put('key2', 'value2');
+		echo Session::pull('key2', 'default');
+		echo '<br />';
+		echo Session::pull('key2', 'default');
+
+		// 获取session所有的数据
+		// $res = Session::all();
+		// echo '<pre>';
+		// print_r($res);
+		echo '<br />';
+		
+		// 判断session中某个key是否存在
+		if(Session::has('key1')){
+			echo 'Yes';
+		}else{
+			echo 'No';
+		}
+		echo '<br />';
+
+		// 暂存数据
+		Session::flash('key3', 'value3');
+		echo Session::get('key3');
+		echo '<br />';
+
+		// 删除session中指定的key的值
+		// Session::forget('key1');
+
+		// 清空所有session信息
+		Session::flush();
 	}
 }
+
 ```
 ![](image/screenshot_1483178266409.png)
+
 
