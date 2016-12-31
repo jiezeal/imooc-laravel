@@ -804,3 +804,34 @@ class StudentController extends Controller
 ![](image/screenshot_1483176867622.png)
 
 ###Controller之Session
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Student;
+use Session;
+
+class StudentController extends Controller
+{
+	public function index(Request $request){
+		// HTTP request session()
+		$request->session()->put('name', 'zhangsan');
+		echo $request->session()->get('name');
+
+		echo '<br />';
+
+		// session()
+		session()->put('email', 'zhulinjie_cool@126.com');
+		echo session()->get('email');
+
+		echo '<br />';
+
+		// Session
+		Session::put('address', 'beijing');
+		echo Session::get('address');
+	}
+}
+```
