@@ -743,3 +743,64 @@ class StudentController extends Controller
 ```
 ![](image/screenshot_1483175026614.png)
 ![](image/screenshot_1483175044756.png)
+
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use App\Student;
+
+class StudentController extends Controller
+{
+	public function index(Request $request){
+		// 判断请求类型
+		echo $request->method();
+
+		echo '<br />';
+
+		if($request->isMethod('GET')){
+			echo 'Yes';
+		}else{
+			echo 'No';
+		}
+
+		echo '<br />';
+
+		// 判断是否是Ajax请求
+		if($request->ajax()){
+			echo 'Yes';
+		}else{
+			echo 'No';
+		}
+
+		echo '<br />';
+
+		// 判断请求的url是否符合特定的格式
+		if($request->is('student')){
+			echo 'Yes';
+		}else{
+			echo 'No';
+		}
+
+		echo '<br />';
+
+		if($request->is('student/*')){
+			echo 'Yes';
+		}else{
+			echo 'No';
+		}
+
+		echo '<br />';
+
+		// 获取当前的url
+		echo $request->url();
+	}
+}
+```
+![](image/screenshot_1483176867622.png)
+
+###Controller之Session
