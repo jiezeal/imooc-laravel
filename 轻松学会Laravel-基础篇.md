@@ -806,7 +806,12 @@ class StudentController extends Controller
 ###Controller之Session
 router.php
 ```
-
+Route::group(['middleware' => ['web']], function () {
+    Route::get('student', [
+    	'uses' => 'StudentController@index',
+    	'as' => 'student'
+    ]);
+});
 ```
 
 StudentController.php
