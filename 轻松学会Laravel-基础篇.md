@@ -895,4 +895,4 @@ class StudentController extends Controller
 ```
 ![](image/screenshot_1483180507725.png)
 
-
+###Controller之Response
