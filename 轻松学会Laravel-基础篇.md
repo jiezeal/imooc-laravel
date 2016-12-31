@@ -948,3 +948,4 @@ class StudentController extends Controller
 再次访问：http://www.zhulinjie.com/laravel/public/student
 
 ![](image/screenshot_1483182335061.png)
+
