@@ -804,6 +804,8 @@ class StudentController extends Controller
 ![](image/screenshot_1483176867622.png)
 
 ###Controller之Session
+`config/session.php` session配置文件  
+
 router.php
 ```
 Route::group(['middleware' => ['web']], function () {
