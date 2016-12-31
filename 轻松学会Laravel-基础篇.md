@@ -711,8 +711,35 @@ use App\Student;
 class StudentController extends Controller
 {
 	public function index(Request $request){
+    	// 取值
 		echo $request->input('name', '默认值');
 	}
 }
-
 ```
+![](image/screenshot_1483174831359.png)
+![](image/screenshot_1483174905195.png)
+
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use App\Student;
+
+class StudentController extends Controller
+{
+	public function index(Request $request){
+    	// 取值
+		if($request->has('name')){
+			echo $request->input('name');
+		}else{
+			echo '参数不存在';
+		}
+	}
+}
+```
+![](image/screenshot_1483175026614.png)
+![](image/screenshot_1483175044756.png)
