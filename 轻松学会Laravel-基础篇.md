@@ -804,6 +804,11 @@ class StudentController extends Controller
 ![](image/screenshot_1483176867622.png)
 
 ###Controller之Session
+router.php
+```
+
+```
+
 StudentController.php
 ```
 <?php
@@ -881,6 +886,6 @@ class StudentController extends Controller
 	}
 }
 ```
-
+![](image/screenshot_1483180507725.png)
 
 
