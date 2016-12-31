@@ -832,6 +832,12 @@ class StudentController extends Controller
 		// Session
 		Session::put('address', 'beijing');
 		echo Session::get('address');
+		echo '<br />';
+
+		// 不存在取默认值
+		echo Session::get('location', 'beijing chaoyang');
 	}
 }
 ```
+![](image/screenshot_1483178266409.png)
+
