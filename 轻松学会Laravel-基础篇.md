@@ -696,3 +696,5 @@ student.blade.php
 </html>
 ```
 ![](image/screenshot_1483030920499.png)
+
+###Controller之Request
