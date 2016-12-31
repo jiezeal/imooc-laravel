@@ -880,8 +880,7 @@ class StudentController extends Controller
 		Session::flush();
 	}
 }
-
 ```
-![](image/screenshot_1483178266409.png)
+
 
 
