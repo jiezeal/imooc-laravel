@@ -806,7 +806,7 @@ class StudentController extends Controller
 ###Controller之Session
 `config/session.php` session配置文件  
 
-router.php
+routes.php
 ```
 Route::group(['middleware' => ['web']], function () {
     Route::get('student', [
@@ -896,4 +896,49 @@ class StudentController extends Controller
 ![](image/screenshot_1483180507725.png)
 
 ###Controller之Response
+routes.php
+```
+Route::group(['middleware' => ['web']], function () {
+    Route::get('student', ['uses' => 'StudentController@index', 'as' => 'student']);
+    Route::get('response', ['uses' => 'StudentController@response', 'as' => 'response']);
+});
+```
+
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Student;
+use Session;
+
+class StudentController extends Controller
+{
+	public function index(Request $request){
+		// 响应的常见类型		1、字符串	2、视图		3、Json		4、重定向
+
+		// 响应json
+		// $data = [
+		// 	'errCode' => 0,
+		// 	'errMsg' => 'success',
+		// 	'data' => 'zhangsan'
+		// ];
+		// return response()->json($data);
+		
+		// 重定向 with原理同session()->flash() 
+		// return redirect('response')->with('message', '我是快闪数据');
+		// return redirect()->action('StudentController@response')->with('message', '我是快闪数据');
+		return redirect()->route('response')->with('message', '我是快闪数据');
+
+		// 返回上一个页面
+		// return redirect()->back();
+	}
+
+	public function response(){
+		echo Session::get('message');
+	}
+}
+```
 
