@@ -698,3 +698,21 @@ student.blade.php
 ![](image/screenshot_1483030920499.png)
 
 ###Controller之Request
+StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use App\Student;
+
+class StudentController extends Controller
+{
+	public function index(Request $request){
+		echo $request->input('name', '默认值');
+	}
+}
+
+```
