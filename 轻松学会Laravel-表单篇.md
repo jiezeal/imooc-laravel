@@ -255,5 +255,11 @@ class StudentController extends Controller
 ###Controller之Middleware
 routes.php
 ```
+Route::get('student', ['uses' => 'StudentController@index', 'as' => 'student']);
 
+Route::group(['middleware' => ['activity']], function () {
+    Route::get('response', ['uses' => 'StudentController@response', 'as' => 'response']);
+});
 ```
+
+StudentController.php
