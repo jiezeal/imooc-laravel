@@ -303,3 +303,9 @@ class Activity{
 ```
 
 Kernel.php
+```
+protected $routeMiddleware = [
+    ...
+    'activity' => \App\Http\Middleware\Activity::class
+];
+```
