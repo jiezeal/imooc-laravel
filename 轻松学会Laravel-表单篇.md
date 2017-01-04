@@ -285,3 +285,21 @@ class StudentController extends Controller
 ```
 
 Activity.php
+```
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+
+class Activity{
+	public function handle($request, Closure $next){
+		if(time() < strtotime('2017-01-04')){
+			return redirect('student');
+		}
+		return $next($request);
+	}
+}
+```
+
+Kernel.php
