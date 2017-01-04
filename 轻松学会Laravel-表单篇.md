@@ -253,3 +253,7 @@ class StudentController extends Controller
 ![](image/screenshot_1483182335061.png)
 
 ###Controller之Middleware
+routes.php
+```
+
+```
