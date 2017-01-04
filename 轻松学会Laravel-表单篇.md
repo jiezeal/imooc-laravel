@@ -258,7 +258,7 @@ routes.php
 // 宣传阶段
 Route::get('student', ['uses' => 'StudentController@index', 'as' => 'student']);
 
-// 活动开始阶段
+// 活动进行阶段
 Route::group(['middleware' => ['activity']], function () {
     Route::get('response', ['uses' => 'StudentController@response', 'as' => 'response']);
 });
