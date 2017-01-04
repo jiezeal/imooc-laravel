@@ -293,6 +293,7 @@ namespace App\Http\Middleware;
 use Closure;
 
 class Activity{
+	// 前置写法
 	public function handle($request, Closure $next){
 		if(time() < strtotime('2017-01-04')){
 			return redirect('student');
@@ -312,3 +313,5 @@ protected $routeMiddleware = [
 ```
 
 访问：http://www.zhulinjie.com/laravel/public/response
+
+![](image/screenshot_1483545484062.png)
