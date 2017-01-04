@@ -263,3 +263,23 @@ Route::group(['middleware' => ['activity']], function () {
 ```
 
 StudentController.php
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Student;
+use Session;
+
+class StudentController extends Controller
+{
+	public function index(Request $request){
+		echo '活动还未开始...';
+	}
+
+	public function response(){
+		echo '活动正在进行中...';
+	}
+}
+```
