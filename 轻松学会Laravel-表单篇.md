@@ -305,6 +305,7 @@ class Activity{
 Kernel.php
 ```
 protected $routeMiddleware = [
+    'auth' => \App\Http\Middleware\Authenticate::class,
     ...
     'activity' => \App\Http\Middleware\Activity::class
 ];
