@@ -310,3 +310,4 @@ protected $routeMiddleware = [
     'activity' => \App\Http\Middleware\Activity::class
 ];
 ```
+
