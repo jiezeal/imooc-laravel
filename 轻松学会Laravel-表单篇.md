@@ -311,4 +311,4 @@ protected $routeMiddleware = [
 ];
 ```
 
-
+访问：http://www.zhulinjie.com/laravel/public/response
