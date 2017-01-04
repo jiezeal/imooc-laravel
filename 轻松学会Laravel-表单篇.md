@@ -314,6 +314,10 @@ protected $routeMiddleware = [
 
 访问：http://www.zhulinjie.com/laravel/public/response
 
-2017-01-04之前访问
+2017-01-04日之前访问
+
 ![](image/screenshot_1483545484062.png)
+
+2017-01-04日之后访问
+
 
