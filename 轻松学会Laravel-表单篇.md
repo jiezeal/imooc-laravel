@@ -283,3 +283,5 @@ class StudentController extends Controller
 	}
 }
 ```
+
+Activity.php
