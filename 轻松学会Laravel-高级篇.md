@@ -14,7 +14,7 @@ mv composer.phar /bin/composer
 ```
 
 ###Composer中国全量镜像
->Composer中国全量镜像网址：http://pkg.phpcomposer.com/
+>http://pkg.phpcomposer.com/
 
 查看当前的镜像地址
 ```
