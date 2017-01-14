@@ -14,13 +14,12 @@ mv composer.phar /bin/composer
 ```
 
 ###Composer中国全量镜像
+>Composer中国全量镜像网址：http://pkg.phpcomposer.com/
+
 查看当前的镜像地址
 ```
 composer config -g repo.packagist
 ```
-
-Composer中国全量镜像网址：
->http://pkg.phpcomposer.com/
 
 Packagist 镜像用法：
 
