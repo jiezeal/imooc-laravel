@@ -10,7 +10,9 @@
 
 查看当前的镜像地址：composer config -g repo.packagist
 
-Composer中国全量镜像网址： http://pkg.phpcomposer.com/
+Composer中国全量镜像网址：
+>http://pkg.phpcomposer.com/
+
 系统全局配置
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 单个项目配置
