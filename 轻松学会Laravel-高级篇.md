@@ -23,6 +23,7 @@ Composer中国全量镜像网址：
 >http://pkg.phpcomposer.com/
 
 Packagist 镜像用法：
+
 系统全局配置
 ```
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
