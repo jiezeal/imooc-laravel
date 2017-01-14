@@ -31,3 +31,10 @@ composer config -g repo.packagist composer https://packagist.phpcomposer.com
 composer config repo.packagist composer https://packagist.phpcomposer.com
 ```
 注：如果没有composer.json文件，需要新建一个composer.json文件，还需要在里面写一对{}号，不然执行这个命令会报错
+
+###使用Composer
+主要命令
+搜索（search）
+展示（show）
+申明依赖（require）
+安装（install）
