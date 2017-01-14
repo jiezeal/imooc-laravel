@@ -8,6 +8,14 @@
 局部安装：
 将composer.phar文件复制到任意目录（比如项目根目录下），然后通过php composer.phar指令即可以使用Composer了
 
+查看当前的镜像地址：composer config -g repo.packagist
 
 Composer中国全量镜像
+
+
+启动本镜像服务
+系统全局配置
+单个项目配置
+
+
 使用Composer
