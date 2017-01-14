@@ -38,3 +38,4 @@ composer config repo.packagist composer https://packagist.phpcomposer.com
 展示（show）
 申明依赖（require）
 安装（install）
+更新（update）
