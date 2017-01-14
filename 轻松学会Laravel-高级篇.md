@@ -20,7 +20,6 @@ mv composer.phar /bin/composer
 ```
 composer config -g repo.packagist
 ```
-
 Packagist 镜像用法：
 全局配置
 ```
