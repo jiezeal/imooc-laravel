@@ -22,7 +22,6 @@ composer config -g repo.packagist
 ```
 
 Packagist 镜像用法：
-
 全局配置
 ```
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
