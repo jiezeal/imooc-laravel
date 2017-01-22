@@ -67,3 +67,5 @@ vi composer.json
 },
 ```
 composer update
+
+###使用Composer安装Laravel
