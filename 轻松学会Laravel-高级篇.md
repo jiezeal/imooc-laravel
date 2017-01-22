@@ -45,7 +45,7 @@ composer search monolog
 ```
 展示（show）
 ```
-composer show -all monolog/monolog
+composer show --all monolog/monolog
 ```
 申明依赖（require）
 vi composer.json
