@@ -61,3 +61,4 @@ vi composer.json
     "monolog/monolog":"1.21.*"
 },
 ```
+composer update
