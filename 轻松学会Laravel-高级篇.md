@@ -58,6 +58,6 @@ composer install
 vi composer.json
 ```
 "require": {
-    "monolog/monolog":"1.21.*",
+    "monolog/monolog":"1.21.*"
 },
 ```
