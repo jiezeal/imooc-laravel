@@ -51,4 +51,13 @@ vi composer.json
 },
 ```
 安装（install）
+```
+composer install
+```
 更新（update）
+vi composer.json
+```
+"require": {
+    "monolog/monolog":"1.21.*",
+},
+```
