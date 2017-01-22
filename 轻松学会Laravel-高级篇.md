@@ -43,6 +43,7 @@ composer search monolog
 composer show -all monolog/monolog
 ```
 申明依赖（require）
+vi composer.json
 ```
 "require": {
     "monolog/monolog":"1.21.*",
