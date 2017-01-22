@@ -35,7 +35,19 @@ composer config repo.packagist composer https://packagist.phpcomposer.com
 ###使用Composer
 主要命令
 搜索（search）
+```
+composer search monolog
+```
 展示（show）
+```
+composer show -all monolog/monolog
+```
 申明依赖（require）
+```
+"require": {
+    "monolog/monolog":"1.21.*",
+    "symfony/http-foundation": "^3.2"
+},
+```
 安装（install）
 更新（update）
