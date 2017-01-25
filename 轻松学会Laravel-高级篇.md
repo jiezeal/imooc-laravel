@@ -70,3 +70,7 @@ composer update
 
 ###使用Composer安装Laravel
 通过Composer Create-Project 命令安装 Laravel
+```
+composer search laravel
+
+```
