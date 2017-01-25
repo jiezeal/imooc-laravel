@@ -72,5 +72,6 @@ composer update
 通过Composer Create-Project 命令安装 Laravel
 ```
 composer search laravel
-
+composer show --all laravel/laravel
+composer create-project laravel/laravel --prefer-dist blog
 ```
