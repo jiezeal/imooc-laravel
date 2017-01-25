@@ -74,4 +74,7 @@ composer update
 composer search laravel
 composer show --all laravel/laravel
 composer create-project laravel/laravel --prefer-dist blog
+composer create-project laravel/laravel shop --prefer-dist "5.3.*"		// 安装某个具体版本
 ```
+
+Laravel 安装器
