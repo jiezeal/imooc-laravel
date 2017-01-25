@@ -77,4 +77,4 @@ composer create-project laravel/laravel --prefer-dist blog
 composer create-project laravel/laravel shop --prefer-dist "5.3.*"		// 安装某个具体版本
 ```
 
-Laravel 安装器
+Laravel 安装器 (这种方法暂时没有实验成功)
