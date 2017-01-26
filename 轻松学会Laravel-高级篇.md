@@ -81,3 +81,7 @@ Laravel 安装器 (这种方法暂时没有实验成功)
 
 ###Artisan基本用法
 查看所有可用的Artisan的命令（list）
+```
+php artisan
+php artisan list
+```
