@@ -85,3 +85,6 @@ Laravel 安装器 (这种方法暂时没有实验成功)
 php artisan
 php artisan list
 ```
+
+查看命令的帮助信息（help）
+php artisan help migrate
