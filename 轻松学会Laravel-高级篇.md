@@ -88,3 +88,4 @@ php artisan list
 
 查看命令的帮助信息（help）
 php artisan help migrate
+
