@@ -105,3 +105,5 @@ php artisan make:controller StudentController
 ```
 php artisan make:model Student
 ```
+
+
