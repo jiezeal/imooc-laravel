@@ -110,3 +110,5 @@ php artisan make:model Student
 ```
 php artisan make:middleware Activity
 ```
+
+
