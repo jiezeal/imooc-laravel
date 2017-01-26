@@ -20,11 +20,13 @@ mv composer.phar /bin/composer
 ```
 composer config -g repo.packagist
 ```
+
 Packagist 镜像用法：
 全局配置
 ```
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 ```
+
 单个项目配置
 打开命令行窗口（windows用户）或控制台（Linux、Mac 用户），进入你的项目的根目录（也就是 composer.json 文件所在目录），执行如下命令：
 ```
