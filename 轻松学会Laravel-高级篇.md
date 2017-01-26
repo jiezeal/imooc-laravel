@@ -100,3 +100,8 @@ php artisan help migrate
 ```
 php artisan make:controller StudentController
 ```
+
+创建模型
+```
+php artisan make:model Student
+```
