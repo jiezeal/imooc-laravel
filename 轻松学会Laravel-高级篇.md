@@ -106,4 +106,7 @@ php artisan make:controller StudentController
 php artisan make:model Student
 ```
 
-
+创建中间件
+```
+php artisan make:middleware Activity
+```
