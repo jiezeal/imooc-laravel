@@ -41,14 +41,17 @@ cd demo
 composer init
 composer config repo.packagist composer https://packagist.phpcomposer.com
 ```
+
 搜索（search）
 ```
 composer search monolog
 ```
+
 展示（show）
 ```
 composer show --all monolog/monolog
 ```
+
 申明依赖（require）
 vi composer.json
 ```
@@ -57,10 +60,12 @@ vi composer.json
     "symfony/http-foundation": "^3.2"
 },
 ```
+
 安装（install）
 ```
 composer install
 ```
+
 更新（update）
 vi composer.json
 ```
