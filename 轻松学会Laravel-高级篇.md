@@ -95,6 +95,7 @@ laravel
 // 安装laravel
 laravel new laravel2
 // 下载最新的开发版本
+laravel new test --dev
 ```
 
 
