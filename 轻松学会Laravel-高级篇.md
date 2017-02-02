@@ -129,7 +129,7 @@ composer create-project laravel/laravel laravel53 --prefer-dist "5.3.*"
 php artisan make:controller StudentController
 // 创建模型
 php artisan make:model Student
-// 
+// 创建中间件
 php artisan make:middleware Activity
 ```
 
