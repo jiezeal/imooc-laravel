@@ -98,7 +98,6 @@ laravel new laravel2
 laravel new test --dev
 ```
 
-
 ###Artisan基本用法
 查看所有可用的Artisan的命令（list）
 ```
