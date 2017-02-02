@@ -124,5 +124,5 @@ php artisan make:middleware Activity
 ```
 
 ```
-composer create-project laravel/laravel demo --prefer-dist "5.3.*"
+composer create-project laravel/laravel laravel53 --prefer-dist "5.3.*"
 ```
