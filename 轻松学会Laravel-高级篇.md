@@ -88,6 +88,7 @@ Laravel 安装器
 ```
 // 使用 Composer 下载 Laravel 安装包
 composer global require "laravel/installer"
+// 再将将 ~/.composer/vendor/bin 路径加到 PATH
 ```
 
 
