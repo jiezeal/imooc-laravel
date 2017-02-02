@@ -92,7 +92,7 @@ composer global require "laravel/installer"
 echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
 // 测试Laravel 安装器是否安装成功
 laravel
-
+// 安装laravel
 ```
 
 
