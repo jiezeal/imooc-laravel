@@ -119,3 +119,4 @@ php artisan make:middleware Activity
 ```
 
 ###Laravel中的用户认证（Auth）
+生成Auth所需文件
