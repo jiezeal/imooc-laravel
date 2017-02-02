@@ -118,4 +118,4 @@ php artisan make:model Student
 php artisan make:middleware Activity
 ```
 
-###Laravel中的用户认证
+###Laravel中的用户认证（Auth）
