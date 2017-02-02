@@ -108,21 +108,6 @@ php artisan list
 查看命令的帮助信息（help）
 php artisan help make:controller
 
-创建控制器
-```
-php artisan make:controller StudentController
-```
-
-创建模型
-```
-php artisan make:model Student
-```
-
-创建中间件
-```
-php artisan make:middleware Activity
-```
-
 ```
 composer create-project laravel/laravel laravel53 --prefer-dist "5.3.*"
 // 创建控制器
