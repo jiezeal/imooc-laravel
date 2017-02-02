@@ -123,4 +123,6 @@ php artisan make:model Student
 php artisan make:middleware Activity
 ```
 
-
+```
+composer create-project laravel/laravel demo --prefer-dist "5.3.*"
+```
