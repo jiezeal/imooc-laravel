@@ -84,7 +84,12 @@ composer create-project laravel/laravel --prefer-dist blog
 composer create-project laravel/laravel shop --prefer-dist "5.3.*"		// 安装某个具体版本
 ```
 
-Laravel 安装器 (这种方法暂时没有实验成功)
+Laravel 安装器
+```
+// 使用 Composer 下载 Laravel 安装包
+composer global require "laravel/installer"
+```
+
 
 ###Artisan基本用法
 查看所有可用的Artisan的命令（list）
