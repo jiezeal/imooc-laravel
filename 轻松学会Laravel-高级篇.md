@@ -125,5 +125,9 @@ php artisan make:auth
 // 执行迁移
 php artisan migrate
 ```
-通过访问 http://192.168.99.100:8080/home 就可以进行注册登录了
+通过访问 http://192.168.99.100:8080/home 就可以进行注册登录了，如果访问出现了样式问题，只需要将 resources/views/layouts/app.blade.php 文件中引入css和引入js的路径改为如下即可：
+```
+{{ asset('css/app.css') }}
+{{ asset('js/app.js') }}
+```
 
