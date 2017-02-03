@@ -154,3 +154,4 @@ create table if not exists students(
 php artisan make:migration create_students_table --create=students
 php artisan make:model Article -m
 ```
+
