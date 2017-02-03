@@ -133,4 +133,4 @@ php artisan migrate
 
 ###Laravel中的数据迁移
 ######新建迁移文件
-通过 `php artisan make:migration create_students_table`
+通过 `php artisan make:migration create_students_table` 来新建迁移文件
