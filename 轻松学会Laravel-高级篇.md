@@ -138,3 +138,8 @@ php artisan migrate
 生成模型的同时生成迁移文件 `php artisan make:model Student -m`
 
 下面咱们以students表来新建一个迁移文件
+```
+create table if not exists students(
+	id int auto_increment primary key,
+    name varchar(255) not 
+```
