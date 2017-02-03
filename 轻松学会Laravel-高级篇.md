@@ -131,4 +131,6 @@ php artisan migrate
 {{ asset('js/app.js') }}
 ```
 
-
+###Laravel中的数据迁移
+######新建迁移文件
+通过 `php artisan make:migration create_students_table`
