@@ -155,3 +155,17 @@ php artisan make:migration create_students_table --create=students
 php artisan make:model Article -m
 ```
 
+2017_02_03_033958_create_students_table.php
+```
+public function up()
+{
+    Schema::create('students', function (Blueprint $table) {
+        $table->increments('id');
+        $table->string('name');
+        $table->integer('age')->unsigned()->default(0);
+        $table->integer('sex')->unsigned()->default(10);
+        $table->integer('created_at')->default(0);
+        $table->integer('updated_at')->default(0);
+    });
+}
+```
