@@ -125,5 +125,5 @@ php artisan make:auth
 // 执行迁移
 php artisan migrate
 ```
-
+通过访问 http://192.168.99.100:8080/home 就可以进行注册登录了
 
