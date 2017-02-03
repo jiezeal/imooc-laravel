@@ -176,4 +176,3 @@ public function up()
 php artisan migrate
 ```
 ![](image/screenshot_1486093918968.png)
-
