@@ -134,3 +134,5 @@ php artisan migrate
 ###Laravel中的数据迁移
 ######新建迁移文件
 通过 `php artisan make:migration create_students_table` 来新建迁移文件。--table和--create参数可以用来指定数据表名称，以及迁移文件是否要建立新的数据表
+
+生成模型的同时生成迁移文件
