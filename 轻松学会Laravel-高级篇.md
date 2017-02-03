@@ -146,5 +146,5 @@ create table if not exists students(
     sex int unsigned not null default 10 comment '性别',
     created_at int not null default 0 comment '新增时间',
     updated_at int not null default 0 comment '修改时间'
-)engine=innodb default charset utf8 auto_increment=1001 comment='学生表'
+)engine=innodb default charset utf8 auto_increment=1001 comment='学生表';
 ```
