@@ -170,3 +170,5 @@ public function up()
     });
 }
 ```
+
+生成数据表
