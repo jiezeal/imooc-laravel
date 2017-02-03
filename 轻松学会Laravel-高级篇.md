@@ -122,5 +122,8 @@ php artisan make:middleware Activity
 ```
 // 生成Auth所需文件
 php artisan make:auth
+// 执行迁移
+php artisan migrate
 ```
+
 
