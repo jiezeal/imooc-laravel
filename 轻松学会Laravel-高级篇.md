@@ -157,7 +157,7 @@ php artisan make:model Article -m
 
 2017_02_03_033958_create_students_table.php
 ```
-// 自定义迁移文件
+// 编辑迁移文件
 public function up()
 {
     Schema::create('students', function (Blueprint $table) {
