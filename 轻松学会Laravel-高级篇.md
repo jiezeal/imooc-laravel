@@ -149,3 +149,8 @@ create table if not exists students(
     updated_at int not null default 0 comment '修改时间'
 )engine=innodb default charset utf8 auto_increment=1001 comment='学生表';
 ```
+
+```
+php artisan make:migration create_students_table --create=students
+php artisan make:model Article -m
+```
