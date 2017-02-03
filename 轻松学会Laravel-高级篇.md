@@ -141,5 +141,9 @@ php artisan migrate
 ```
 create table if not exists students(
 	id int auto_increment primary key,
-    name varchar(255) not 
+    name varchar(255) not null default '' comment '姓名',
+    age int unsigned not null default 0 comment '年龄',
+    sex int unsigned not null default 10 comment '性别',
+    created_at int not null default 0 comment '新增时间',
+    updated_at int not null default 0 comment '修改时间'
 ```
