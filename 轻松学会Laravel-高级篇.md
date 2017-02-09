@@ -275,6 +275,47 @@ routes/web.php
 Route::any('/upload', 'StudentController@upload');
 ```
 
+StudentController
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
+class StudentController extends Controller
+{
+    public function upload(Request $request){
+    	if($request->isMethod('POST')){
+    		$file = $request->file('source');
+
+    		// 判断文件是否上传成功
+    		if($file->isValid()){
+    			// 获取原文件名
+    			$oriFileName = $file->getClientOriginalName();
+    			// 获取文件的扩展名
+    			$ext = $file->getClientOriginalExtension();
+    			// 获取文件的mime类型
+    			$type = $file->getClientMimeType();
+    			// 临时文件的绝对路径
+    			$realPath = $file->getRealPath();
+
+    			$filename = date('Y-m-d H-i-s') . '-'. uniqid() . '.' . $ext;
+
+    			$bool = Storage::disk('uploads')->put($filename, file_get_contents($realPath));
+
+    			var_dump($bool);
+    		}
+
+			exit;
+    	}
+
+    	return view('student.upload');
+    }
+}
+```
+
 
 
 
