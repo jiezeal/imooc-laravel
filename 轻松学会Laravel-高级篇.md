@@ -209,6 +209,10 @@ public function run()
 }
 ```
 
+```
+php artisan db:seed --class=StudentTableSeeder
+```
+
 database/seeds/DatabaseSeeder.php
 ```
 public function run()
@@ -217,6 +221,10 @@ public function run()
     // 批量执行填充文件需要先引入一下
     $this->call(StudentTableSeeder::class);
 }
+```
+
+```
+php artisan db:seed
 ```
 
 
