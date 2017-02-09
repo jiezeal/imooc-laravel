@@ -307,6 +307,7 @@ class StudentController extends Controller
 
     			var_dump($bool);
     		}
+            
 			exit;
     	}
 
