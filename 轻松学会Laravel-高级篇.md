@@ -187,3 +187,4 @@ php artisan make:seeder studentTableSeeder
 ```
 php artisan db:seed --class=StudentTableSeeder
 ```
+
