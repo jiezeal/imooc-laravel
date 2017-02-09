@@ -275,7 +275,7 @@ routes/web.php
 Route::any('/upload', 'StudentController@upload');
 ```
 
-StudentController
+app/Http/Controller/StudentController
 ```
 <?php
 
