@@ -270,7 +270,7 @@ config/filesystems.php
 ],
 ```
 
-
+routes/web.php
 
 
 
