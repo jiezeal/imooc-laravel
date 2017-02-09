@@ -198,3 +198,15 @@ php artisan db:seed
 php artisan make:seeder StudentTableSeeder
 ```
 
+database/seeds/StudentTableSeeder.php
+```
+public function run()
+{
+    DB::table('students')->insert([
+    	['name'=>'zhangsan', 'age'=>18],
+    	['name'=>'lishi', 'age'=>20]
+    ]);
+}
+```
+
+
