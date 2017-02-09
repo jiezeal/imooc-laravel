@@ -177,4 +177,4 @@ php artisan migrate
 ```
 ![](image/screenshot_1486093918968.png)
 
-###
+###Laravel中的数据填充
