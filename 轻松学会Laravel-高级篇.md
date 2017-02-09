@@ -229,6 +229,11 @@ php artisan db:seed
 
 ![](image/screenshot_1486652322614.png)
 
+![](image/screenshot_1486652398063.png)
+
+![](image/screenshot_1486652467473.png)
+
+
 
 
 
