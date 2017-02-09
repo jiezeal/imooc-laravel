@@ -234,6 +234,11 @@ php artisan db:seed
 ![](image/screenshot_1486652467473.png)
 
 ###Laravel中的文件上传
+![](image/screenshot_1486652654045.png)
+
+配置文件：config/filesystems.php
+
+
 
 
 
