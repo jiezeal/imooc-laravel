@@ -241,8 +241,36 @@ Laravel的文件系统是基于Frank de Jonge的Flysystem扩展包，提供了�
 文件上传实例
 config/filesystems.php
 ```
+'disks' => [
 
+    'local' => [
+        'driver' => 'local',
+        'root' => storage_path('app'),
+    ],
+
+    'public' => [
+        'driver' => 'local',
+        'root' => storage_path('app/public'),
+        'visibility' => 'public',
+    ],
+
+    'uploads' => [
+        'driver' => 'local',
+        'root' => storage_path('app/uploads')
+    ],
+
+    's3' => [
+        'driver' => 's3',
+        'key' => 'your-key',
+        'secret' => 'your-secret',
+        'region' => 'your-region',
+        'bucket' => 'your-bucket',
+    ],
+
+],
 ```
+
+
 
 
 
