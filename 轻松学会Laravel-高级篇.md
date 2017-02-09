@@ -233,7 +233,7 @@ php artisan db:seed
 
 ![](image/screenshot_1486652467473.png)
 
-
+###Laravel中的文件上传
 
 
 
