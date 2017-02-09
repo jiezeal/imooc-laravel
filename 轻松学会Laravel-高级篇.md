@@ -178,3 +178,12 @@ php artisan migrate
 ![](image/screenshot_1486093918968.png)
 
 ###Laravel中的数据填充
+创建一个填充文件，并完善填充文件
+```
+php artisan make:seeder studentTableSeeder
+```
+
+执行单个填充文件
+```
+php artisan db:seed --class=StudentTableSeeder
+```
