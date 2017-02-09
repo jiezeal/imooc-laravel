@@ -271,6 +271,9 @@ config/filesystems.php
 ```
 
 routes/web.php
+```
+Route::any('/upload', 'StudentController@upload');
+```
 
 
 
