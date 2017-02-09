@@ -211,7 +211,11 @@ public function run()
 
 database/seeds/DatabaseSeeder.php
 ```
-
+public function run()
+{
+    // $this->call(UsersTableSeeder::class);
+    $this->call(StudentTableSeeder::class);
+}
 ```
 
 
