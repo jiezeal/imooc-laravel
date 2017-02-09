@@ -180,7 +180,7 @@ php artisan migrate
 ###Laravel中的数据填充
 创建一个填充文件，并完善填充文件
 ```
-php artisan make:seeder studentTableSeeder
+php artisan make:seeder StudentTableSeeder
 ```
 
 执行单个填充文件
