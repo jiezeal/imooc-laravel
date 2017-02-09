@@ -316,6 +316,7 @@ class StudentController extends Controller
 }
 ```
 
+resources/views/student/upload.blade.php
 
 
 
