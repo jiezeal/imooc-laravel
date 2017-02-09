@@ -188,3 +188,7 @@ php artisan make:seeder studentTableSeeder
 php artisan db:seed --class=StudentTableSeeder
 ```
 
+批量执行填充文件
+```
+php artisan db:seed
+```
