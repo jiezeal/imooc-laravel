@@ -193,8 +193,8 @@ php artisan db:seed --class=StudentTableSeeder
 php artisan db:seed
 ```
 
+数据填充实例
 ```
 php artisan make:seeder StudentTableSeeder
-
 ```
 
