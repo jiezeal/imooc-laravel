@@ -214,6 +214,7 @@ database/seeds/DatabaseSeeder.php
 public function run()
 {
     // $this->call(UsersTableSeeder::class);
+    // 批量执行填充文件需要先引入一下
     $this->call(StudentTableSeeder::class);
 }
 ```
