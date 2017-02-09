@@ -227,8 +227,8 @@ public function run()
 php artisan db:seed
 ```
 
-如下图：已经填充了4条数据
 ![](image/screenshot_1486652322614.png)
+
 
 
 
