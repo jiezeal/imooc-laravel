@@ -316,7 +316,7 @@ class StudentController extends Controller
 }
 ```
 
-resources/views/student/upload.blade.php
+resources/views/student/upload.blade.php（复制的是 Laravel中的用户认证（Auth）小节生成的login.blade.php）
 ```
 @extends('layouts.app')
 
