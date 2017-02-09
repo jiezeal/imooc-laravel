@@ -235,9 +235,8 @@ php artisan db:seed
 
 ###Laravel中的文件上传
 Laravel的文件系统是基于Frank de Jonge的Flysystem扩展包，提供了简单的接口，可以操作本地端空间、Amazon、S3、Rackspace Cloud Storage，可以非常简单的切换不同保存方式，但仍使用相同的API操作
-![](image/screenshot_1486652654045.png)
 
-配置文件：config/filesystems.php
+配置文件位置：config/filesystems.php
 
 
 
