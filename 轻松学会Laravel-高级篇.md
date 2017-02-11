@@ -413,5 +413,65 @@ resources/views/student/mail.blade.php
 
 ![](image/screenshot_1486784315481.png)
 
+###Laravel中的缓存使用
+配置文件位置：config/cache.php
 
+routes/web.php
+```
+Route::any('/cache1', 'StudentController@cache1');
+Route::any('/cache2', 'StudentController@cache2');
+```
+
+app/Http/Controller/StudentController
+```
+public function cache1(){
+	// put() 保存对象到缓存中
+	Cache::put('key1', 'val1', 10);
+
+	// add() 也是添加缓存 如果key1存在则添加失败，不存在则添加成功
+	$bool = Cache::add('key1', 'val1', 10);
+	var_dump($bool);
+
+	$bool = Cache::add('key2', 'val2', 10);
+	var_dump($bool);
+
+	// forever() 永久的保存对象到缓存中
+	Cache::forever('key3', 'val3');
+
+	// has() 判断key是否存在
+	if(Cache::has('key3')){
+		$val = Cache::get('key3');
+		var_dump($val);
+	}else{
+		echo 'No';
+	}
+}
+
+public function cache2(){
+	// get() 从缓存中获取对象
+	$val = Cache::get('key1');
+	var_dump($val);
+
+	$val = Cache::get('key2');
+	var_dump($val);
+
+	$val = Cache::get('key3');
+	var_dump($val);
+
+	// 获取并删除缓存
+	$val = Cache::pull('key2');
+	var_dump($val);
+
+	// forget() 从缓存中删除对象
+	$bool = Cache::forget('key3');
+	var_dump($bool);
+}
+```
+
+###Laravel中的错误与日志
+配置文件位置：config/app.php
+
+Debug模式
+HTTP异常
+日志
 
