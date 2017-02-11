@@ -424,6 +424,8 @@ Route::any('/cache2', 'StudentController@cache2');
 
 app/Http/Controller/StudentController
 ```
+use Illuminate\Support\Facades\Cache;
+
 public function cache1(){
 	// put() 保存对象到缓存中
 	Cache::put('key1', 'val1', 10);
@@ -469,9 +471,16 @@ public function cache2(){
 ```
 
 ###Laravel中的错误与日志
+######Debug模式
 配置文件位置：config/app.php
+>进行本地开发时，应该配置APP_DEBUG环境变量为true，在上线环境，这个值应该永远为false
 
-Debug模式
 HTTP异常
+>有些异常描述来自服务器的HTTP错误码。例如，这可能是一个“页面未找到”错误（404），“认证失败错误”（401）亦或是程序出错造成的400错误
+
 日志
+>Laravel日志工具基于强大的Monolog库，提供了single、daily、syslog和errorlog日志模式，以及debug、info、notice、warning、error、critical和alert七个错误级别
+
+
+
 
