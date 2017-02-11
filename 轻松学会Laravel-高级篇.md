@@ -357,8 +357,61 @@ resources/views/student/upload.blade.php（复制的是 Laravel中的用户认�
 ![](image/screenshot_1486656049790.png)
 
 ###Laravel中的邮件发送
+配置文件：config/mail.php
+Mail::raw() 发送纯文本格式 			Mail::send() 发送html格式
 
+第一种发送方式
+.env
+```
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.163.com
+MAIL_PORT=465
+MAIL_USERNAME=jiezeal@163.com
+MAIL_PASSWORD=Internet678
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=jiezeal@163.com
+MAIL_FROM_NAME='jiezeal'
+```
 
+routes/web.php
+```
+Route::any('/mail', 'StudentController@mail');
+```
+
+app/Http/Controller/StudentController
+```
+use Mail;	
+
+public function mail(){
+	// 第一种发送方式 发送纯文本
+	Mail::raw('邮件内容', function ($message){
+		$message->from('jiezeal@163.com', 'jiezeal');
+		$message->subject('邮件主题');
+		$message->to('jiezeal@foxmail.com');
+	});
+}
+```
+
+![](image/screenshot_1486784167667.png)
+
+第二种发送方式
+app/Http/Controller/StudentController
+```
+public function mail(){
+	// 第二种发送方式 发送html
+	Mail::send('student.mail', ['name' => 'jiezeal', 'age' => 18], function ($message){
+		$message->subject('邮件主题');
+		$message->to('jiezeal@foxmail.com');
+	});
+}
+```
+
+resources/views/student/mail.blade.php
+```
+<h1>Hello {{ $name }} {{ $age }}</h1>
+```
+
+![](image/screenshot_1486784315481.png)
 
 
 
