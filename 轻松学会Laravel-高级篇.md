@@ -481,6 +481,127 @@ HTTP异常
 日志
 >Laravel日志工具基于强大的Monolog库，提供了single、daily、syslog和errorlog日志模式，以及debug、info、notice、warning、error、critical和alert七个错误级别
 
+routes/web.php
+```
+Route::any('/error', 'StudentController@error');
+```
+
+app/Http/Controller/StudentController
+```
+use Illuminate\Support\Facades\Log;
+
+public function error(){
+	$name = 'zhangsan';
+	var_dump($name);
+
+	return view('student.error');
+
+	$student = null;
+	if($student == null){
+    	// 对应 resource/views/errors/503.blade.php
+		abort('503');				
+        // 对应 resource/views/errors/500.blade.php
+		abort('500');
+	}
+
+	Log::info('这是一个info级别的日志');
+	Log::warning('这是一个warning级别的日志');
+	Log::error('这是一个error级别的日志', ['name' => 'zhangsan', 'age' => 18]);
+
+}
+```
+
+![](image/screenshot_1486810130375.png)
+
+![](image/screenshot_1486810097394.png)
+
+对应的是 resource/views/errors/404.blade.php
+
+![](image/screenshot_1486810167480.png)
+
+###Laravel中的队列应用
+Laravel队列服务为各种不同的后台队列提供了统一的API，允许推迟耗时任务（例如发送邮件）的执行，从而大幅提高web请求速度
+
+配置文件位置：config/queue.php
+
+主要步骤
+迁移队列需要的数据表
+```
+php artisan queue:table
+php artisan migrate
+```
+
+编写任务类
+```
+php artisan make:job SendEmail
+```
+
+app/SendEmail.php
+```
+<?php
+
+namespace App\Jobs;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Mail;
+
+class SendEmail implements ShouldQueue
+{
+    use InteractsWithQueue, Queueable, SerializesModels;
+
+    protected $email;
+
+    /**
+     * Create a new job instance.
+     *
+     * @return void
+     */
+    public function __construct($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * Execute the job.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        Mail::raw('队列测试', function ($message){
+            $message->subject('队列测试');
+            $message->to($this->email);
+        });
+    }
+}
+```
+
+推送任务到队列
+浏览器访问 http://192.168.99.100:8080/queue
+
+运行队列监听器
+```
+php artisan queue:listen
+```
+
+处理失败任务
+```
+php artisan queue:failed-table
+php artisan migrate
+// 查看执行失败的任务
+php artisan queue:failed
+// 重新执行（ID为1）的那一条失败的任务
+php artisan queue:retry 1
+// 重新执行所有失败的任务
+php artisan queue:retry all
+// 删除（ID为4）的那一条失败的任务
+php artisan queue:forget 4
+// 删除所有执行失败的任务
+php artisan queue:flush
+```
 
 
 
