@@ -356,6 +356,8 @@ resources/views/student/upload.blade.php（复制的是 Laravel中的用户认�
 
 ![](image/screenshot_1486656049790.png)
 
+###Laravel中的邮件发送
+
 
 
 
