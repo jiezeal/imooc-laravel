@@ -579,6 +579,18 @@ class SendEmail implements ShouldQueue
 }
 ```
 
+routes/web.php
+```
+Route::any('/queue', 'StudentController@queue');
+```
+
+app/Http/Controller/StudentController
+```
+public function queue(){
+	dispatch(new SendEmail('jiezeal@foxmail.com'));
+}
+```
+
 推送任务到队列
 浏览器访问 http://192.168.99.100:8080/queue
 
@@ -603,6 +615,4 @@ php artisan queue:forget 4
 php artisan queue:flush
 ```
 
-
-
-
+![](image/screenshot_1486819898685.png)
