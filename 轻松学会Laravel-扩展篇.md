@@ -133,7 +133,7 @@ if($validator->fails()){
 {{ $errors->first('Student.sex') }}
 ```
 
-输出性别
+模型中定义sex()方法
 Student.php
 ```
 const SEX_UN = 10;
