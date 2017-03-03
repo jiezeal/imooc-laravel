@@ -15,3 +15,36 @@ php artisan make:controller PhotoController --resource --model=Photo
 {{ csrf_field() }}
 ```
 
+资源控制器 删除
+```
+<a href="javascript:;" class="delete" data-id="{{ $student->id }}">删除</a>
+
+<script>
+    $(function(){
+        $.ajaxSetup({
+            headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}'}
+        });
+
+        $('.delete').on('click', function () {
+            if(confirm('确认要删除吗？')){
+                $.ajax({
+                    type: 'post',
+                    url: '/student/' + $(this).data('id'),
+                    data: {_method: 'delete'},
+                    dataType: 'json',
+                    success: function (data, status, xhr) {
+                        if(data.ServerNo == 'SN000'){
+                            alert(data.ResultData);
+                            location.href = '/student';
+                        }else{
+                            alert(data.ResultData);
+                            location.href = '/student';
+                        }
+                    },
+                    async: true
+                });
+            }
+        });
+    });
+</script>
+```
