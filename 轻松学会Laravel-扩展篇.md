@@ -154,3 +154,22 @@ public function sex($ind = null){
 }
 ```
 
+@parent继承父模版内容
+```
+<!-- 尾部 -->
+@section('footer')
+<div class="jumbotron" style="margin:0;">
+    <div class="container">
+        <span>  @2016 imooc</span>
+    </div>
+</div>
+@show
+```
+
+```
+@section('footer')
+	@parent
+    新内容
+@stop
+```
+
