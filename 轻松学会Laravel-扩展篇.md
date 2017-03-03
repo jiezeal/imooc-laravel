@@ -48,3 +48,4 @@ php artisan make:controller PhotoController --resource --model=Photo
     });
 </script>
 ```
+
