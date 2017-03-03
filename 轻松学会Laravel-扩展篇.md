@@ -134,7 +134,6 @@ if($validator->fails()){
 ```
 
 模型中定义sex()方法
-Student.php
 ```
 const SEX_UN = 10;
 const SEX_BOY = 20;
