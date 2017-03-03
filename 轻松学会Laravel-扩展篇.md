@@ -49,3 +49,87 @@ php artisan make:controller PhotoController --resource --model=Photo
 </script>
 ```
 
+###表单验证
+```
+// 控制器验证
+$this->validate($request, [
+    'Student.name' => 'required|min:2|max:20',
+    'Student.age' => 'required|integer',
+    'Student.sex' => 'required|integer'
+], [
+    'required' => ':attribute 为必填项',
+    'min' => ':attribute 长度不符合要求',
+    'integer' => ':attribute 必须为整数'
+], [
+    'Student.name' => '姓名',
+    'Student.age' => '年龄',
+    'Student.sex' => '性别',
+]);
+
+// Validator类验证
+/*$validator = \Validator::make($request->input(), [
+    'Student.name' => 'required|min:2|max:20',
+    'Student.age' => 'required|integer',
+    'Student.sex' => 'required|integer'
+], [
+    'required' => ':attribute 为必填项',
+    'min' => ':attribute 长度不符合要求',
+    'integer' => ':attribute 必须为整数'
+], [
+    'Student.name' => '姓名',
+    'Student.age' => '年龄',
+    'Student.sex' => '性别',
+]);
+
+if($validator->fails()){
+    return redirect()->back()->withErrors($validator)->withInput();
+}*/
+```
+
+```
+<!-- 成功提示框 -->
+@if(\Session::has('success'))
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>成功!</strong> {{ Session::get('success') }}
+    </div>
+@endif
+
+<!-- 失败提示框 -->
+@if(\Session::has('error'))
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>失败!</strong> {{ Session::get('error') }}
+    </div>
+@endif
+```
+
+```
+<!-- 所有的错误提示 -->
+@if(count($errors))
+<div class="alert alert-danger">
+    <ul>
+        <li>{{ $errors->first() }}</li>
+    </ul>
+</div>
+
+<div class="alert alert-danger">
+    <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+```
+
+```
+{{ $errors->first('Student.name') }}
+{{ $errors->first('Student.age') }}
+{{ $errors->first('Student.sex') }}
+```
+
