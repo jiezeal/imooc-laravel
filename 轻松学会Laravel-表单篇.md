@@ -109,7 +109,7 @@ class StudentController extends Controller
 ###Controller之Session
 `config/session.php` session配置文件  
 
-Kernel.php
+app/Http/Kernel.php
 
 ![](image/screenshot_1483548281797.png)
 
