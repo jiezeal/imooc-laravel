@@ -8,6 +8,7 @@
 局部安装：将composer.phar文件复制到任意目录（比如项目根目录下），然后通过`php composer.phar`指令即可以使用Composer了
 
 全局安装：
+composer下载：https://getcomposer.org/composer.phar
 ```
 chmod u+x composer.phar
 mv composer.phar /bin/composer
