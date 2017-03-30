@@ -19,7 +19,7 @@ mv composer.phar /bin/composer
 
 查看当前的镜像地址
 ```
-composer config -g repo.packagist
+composer config -gl
 ```
 
 Packagist 镜像用法：
@@ -91,6 +91,8 @@ Laravel 安装器
 composer global require "laravel/installer"
 // 再将 ~/.composer/vendor/bin 路径加到 PATH
 echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
+// 重启一下
+reboot
 // 测试Laravel 安装器是否安装成功
 laravel
 // 安装laravel
