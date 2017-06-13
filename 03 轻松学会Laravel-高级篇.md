@@ -26,6 +26,8 @@ Packagist 镜像用法：
 全局配置
 ```
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
+// 还原初始配置
+composer config -g repo.packagist composer https?://packagist.org
 ```
 
 单个项目配置
